@@ -9,14 +9,14 @@ import javax.swing.JPanel;
 
 public class KochPanel extends JPanel
 {
-   private final int PANEL_WIDTH = 400;
-   private final int PANEL_HEIGHT = 400;
+   private final int PANEL_WIDTH = 800;
+   private final int PANEL_HEIGHT = 800;
 
    private final double SQ = Math.sqrt(3.0) / 6;
 
-   private final int TOPX = 200, TOPY = 20;
-   private final int LEFTX = 60, LEFTY = 300;
-   private final int RIGHTX = 340, RIGHTY = 300;
+   private final int TOPX = 400, TOPY = 40;
+   private final int LEFTX = 120, LEFTY = 600;
+   private final int RIGHTX = 680, RIGHTY = 600;
 
    private int current; //current order
 
@@ -26,7 +26,7 @@ public class KochPanel extends JPanel
    public KochPanel (int currentOrder)
    {
       current = currentOrder;
-      setBackground (Color.black);
+      setBackground (Color.blue);
       setPreferredSize (new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
    }
 
@@ -71,7 +71,7 @@ public class KochPanel extends JPanel
    {
       super.paintComponent (page);
 
-      page.setColor (Color.green);
+      page.setColor (Color.white);
 
       drawFractal (current, TOPX, TOPY, LEFTX, LEFTY, page);
       drawFractal (current, LEFTX, LEFTY, RIGHTX, RIGHTY, page);
